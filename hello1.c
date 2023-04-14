@@ -12,7 +12,7 @@ void  __exit hw_exit(void)
 	printk(KERN_INFO"Exit World\n");
 }
 
-MODULE_LICENCE("GPL");
+MODULE_LICENSE("GPL");
 module_init(hw_init);
 module_exit(hw_exit);
 
