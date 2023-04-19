@@ -106,7 +106,11 @@ module_exit(chr_driver_exit);
 
 MODULE_LICENSE("GPL");
 	
-
+/*output:
+Device driver is removed sucessfully....
+[42148.933520] Device driver insert... done properly..
+syed@syed-VirtualBox:~/ldd$
+*/
 
 
 
