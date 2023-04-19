@@ -55,3 +55,11 @@ int main()
 	}
 	close(fd);
 }
+
+/*output:
+syed@syed-VirtualBox:~/Desktop/kernel$ cc test_drv.c -o test_drv
+syed@syed-VirtualBox:~/Desktop/kernel$ sudo ./test_drv
+[sudo] password for syed: 
+character device driver...
+cannot open device file..
+*/
