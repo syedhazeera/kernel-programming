@@ -57,9 +57,51 @@ int main()
 }
 
 /*output:
-syed@syed-VirtualBox:~/Desktop/kernel$ cc test_drv.c -o test_drv
 syed@syed-VirtualBox:~/Desktop/kernel$ sudo ./test_drv
-[sudo] password for syed: 
 character device driver...
-cannot open device file..
+please enter your option
+
+		1.Write			
+		2.Read		
+		3.Exit			
+1 hii this is hazeera
+ your options = 1
+enter the string to write into driver:
+Data written...DONE...
+please enter your option
+
+		1.Write			
+		2.Read		
+		3.Exit			
+ your options = 
+
+enter the valid option =
+
+please enter your option
+
+		1.Write			
+		2.Read		
+		3.Exit			
+2
+ your options = 2
+Data is Reading...Done..
+
+Data =  hii this is hazeera
+
+please enter your option
+
+		1.Write			
+		2.Read		
+		3.Exit			
+ your options = 
+
+enter the valid option =
+
+please enter your option
+
+		1.Write			
+		2.Read		
+		3.Exit			
+3
+ your options = 3
 */
