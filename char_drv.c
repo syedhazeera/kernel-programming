@@ -71,6 +71,15 @@ static int __init chr_driver_init(void)
 		printk(KERN_INFO"Can not allocate the major number...\n");
 		return -1;
 	}
+	printk(KERN_INFO "Major = %d minor = %d..\n",MAJOR(dev),MINOR(dev));
+	//creating cdev structure
+	cdev_init(&my_cdev,&fops);
+	//adding character device to the system
+	if((cdev_add(&my_cdev,dev,1))<0)
+	{
+		printk(KERN_INFO "Cannot add the device to the systme..\n");
+		goto r_class;
+	}
 	//creating struct class
 	if((dev_class = class_create(THIS_MODULE,"my_class")) == NULL)
 	{
@@ -107,9 +116,8 @@ module_exit(chr_driver_exit);
 MODULE_LICENSE("GPL");
 	
 /*output:
-Device driver is removed sucessfully....
-[42148.933520] Device driver insert... done properly..
-syed@syed-VirtualBox:~/ldd$
+Major = 238 minor = 0..
+[25143.683778] Device driver insert... done properly..
 */
 
 
